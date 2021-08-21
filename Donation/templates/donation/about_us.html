@@ -1,0 +1,39 @@
+{% extends 'donation/base.html' %}
+{% load static %}
+
+{% block content %}
+ <section id="branding">
+               <div class="row">
+                  <div class="col-md-4">
+
+                  </div>
+                  <div class="col-md-4">
+                    <h2 class="h2w"><span class="spn">About ~ </span> Online ~ Donation</h2>
+                  </div>
+                  <div class="col-md-4 white ml-auto">
+                    <p><a href="{% url 'index' %}">Home</a> | <span class="style">About</span></p>
+                  </div>
+               </div>
+      </section>
+      <section>
+      <div class="container">
+        <div class="row gap">
+          <div class="col-md-6">
+               <h2 class="text-center">Our Background</h2>
+               
+               <p>Naseeb Abdul Juma Issack (born 2 October 1989), popularly known by his stage name Diamond Platnumz, and often referred to as "Simba" (meaning Lion in Swahili) or "The King of Bongo-Flava" is a Tanzanian bongo flava recording artist, actor, dancer, philanthropist and a businessman from Tandale, Dar es Salaam. He is the founder and CEO of WCB Wasafi Record Label, Zoom Extra, Wasafi TV, a Tanzanian media outlet, and Wasafi Fm, one of Tanzania's latest radio stations.[2]
+
+Diamond Platnumz is among the most popular artists in East and Central Africa. He has had several hit songs and has been awarded numerous awards. He is the first Africa-based artist to reach a combined total of 900 million YouTube views.[4] In 2013, according to Tanzania's mobile phone companies, he was the best selling artist of ringtones.[citation needed] Diamond is also one of the top earners in the African Great Lakes region's music industry.[3]
+
+Diamond is jointly managed by Sallam Ahmed Sharaff (Sallam SK) a.k.a. Don Mendez, Hamisi Shaban Taletale (Babu Tale) and Saidi Hassan Mlinge (Mkubwa Fella) from the Tanzanian music.[citation needed] </p>
+
+          </div>
+          <div class="col-md-6 img-hover-zoom">
+            <img src="{% static 'image/13.jpg' %}" class="img-fluid image" alt="about">
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+
+    {% endblock %}

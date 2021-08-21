@@ -1,0 +1,26 @@
+{% extends 'donation/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="content-section container jumbotron mt-4">
+    <div class="row">
+        <div class="col-sm-5">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+           <legend class="border-bottom text-center here" mb-4>Login Here</legend>
+           {{ form | crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Login</button>
+        </div>
+        <div class="border-top pt-3">
+            <small class="text-muted"> Need an account?
+                <a class="ml-1" href="{% url 'register' %}">Sign Up Here</a>
+            </small>
+        </div>
+    </form>
+    </div>
+    </div>
+</div>
+{% endblock %}

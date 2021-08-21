@@ -1,0 +1,12 @@
+{% extends 'donation/base.html' %}
+
+{% block content %}
+<div class="container text-center">
+    {% if uses.is_superuser %}
+
+    {% else %}
+    <a  class='nav-link' href="login">Login As Admin</a>
+<a class="nav-link" href="{% url 'login' %}">Login As Ngo</a>
+{% endif %}
+</div>
+{% endblock %}

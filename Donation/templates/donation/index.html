@@ -1,0 +1,59 @@
+{% extends 'donation/base.html'%}
+{% load static %}
+
+{% block content %}
+<section>
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner dark">
+    <div class="carousel-item active">
+      <img src="{% static 'image/1.JPG' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'image/8.JPG' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'image/3.webp' %}" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</section>
+<section>
+  <div class="container top">
+    <h2 class="text-center post">Recents Post</h2>
+<div class="row margin">
+   {% for post in post %}
+  <div class="col-md-6">
+     <h2>{{post.ngo_name}}</h2>
+  <div class="card" style="width: 28rem;">
+    <div class="img-hover">
+     
+  <img  src="{{post.image.url}}" class="card-img-top" alt="...">
+    </div>
+  <div class="card-body">
+    
+    <h5 class="card-title">{{post.title}}</h5>
+    <p class="card-text">{{post.content}}</p>
+    <P class="card-text">{{post.date_posted}}</P>
+    <p class="card-text"><small>Posted by {{post.author}}</small></p>
+    <a href="{% url 'donate' %}" class="btn btn-primary">Donate Here</a>
+  </div>
+  </div>
+  </div>
+   {% endfor %}
+</div>
+  </div>
+</section>
+{% endblock %}
